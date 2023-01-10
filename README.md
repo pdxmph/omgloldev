@@ -10,3 +10,7 @@ Make a little Sinatra environment where you can work on your omg.lol blog templa
 - `bundle install`
 - `ruby omgloldev.rb`
 - Visit [http://127.0.0.1:4567/template](http://127.0.0.1:4567/template) for now
+
+## etc.
+
+- [Useful web tool to quickly convert HTML to HAML](https://awsm-tools.com/html-to-haml)
