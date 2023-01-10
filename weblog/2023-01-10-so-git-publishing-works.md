@@ -1,7 +1,7 @@
 ---
 Date: January 10, 2023 15:45
 Title: So git publishing works? 
-tags: blogs, websites,candidates, testing
+tags: blogs, websites,candidates, testing, secondbiteatapple
 ---
 
 # We're wondering if git publishing works
