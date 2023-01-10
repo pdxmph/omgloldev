@@ -1,0 +1,9 @@
+weblog_title: omg mph weblog
+separator: &bull;
+post_title: This is a fixture headline
+date: '2023-01-01'
+tags: 
+  - testing
+  - fixtures
+  - omg
+  - lol

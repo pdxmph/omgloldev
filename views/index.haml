@@ -3,10 +3,7 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     
-    - if @display_type == "raw"
-      %title {weblog-title}{separator}{post-title}
-    -else 
-      %title "#{@title} #{@separator} #{@post_title}"
+    %title "omgloldev: An omglol blog dev environment"
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
     %link{href: "https://cdn.simplecss.org/simple.min.css", rel: "stylesheet"}/
@@ -85,25 +82,7 @@
                 padding-bottom:2em;
               }
       
-      .column-left {
-        float: left;
-        width: 75%;
-        padding: 10px;
-      }
-      
-      .column-right {
-        float: left;
-        width: 20%;
-        padding-top: 2em;
-      }
-      
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      
+            
       /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
       @media screen and (max-width: 600px) {
         .column-left, .column-right {
@@ -117,27 +96,28 @@
   %body
     %header
       %h1.weblog-title
-        %i.meteor.fa-solid.fa-meteor>
-        - if @display_type == "raw"
-           {weblog-title}
-        - else
-           #{@title}
+        %i.fa-flask.fa-solid.meteor
+         omgloldev 
+      %p An omglol blog dev environment
+      
+      %nav
+        %ul
+          %li
+            %a{ :href => "/preview", :title => "Preview" }
+              %i.fa-solid.fa-magnifying-glass.meteor
+              Preview
+          %li
+            %a{ :href => "#", :title => "Raw HTML" }
+              %i.fa-solid.fa-code.meteor
+              Raw
+          %li
+            %a{ :href => "#", :title => "Other" } 
+              %i.fa-solid.fa-box-heart.meteor
+              Other
     %main
-      .row
-        .column-left
-          %article
-            {body}
-            .meta
-              %i.fa-solid.fa-clock
-              - if @display_type == "raw"
-                {date}
-              - else 
-                #{@date}
-              %br/
-              {tags}
-        .column-right
-          %h3 Recent Posts
-          {recent-posts}
+      %article
+        There is not much to say here yet.      
+      
     %footer
       %p
         Made with

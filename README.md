@@ -2,7 +2,6 @@
 
 Make a little Sinatra environment where you can work on your omg.lol blog template, preview changes locally, publish your template and blog posts to omg.lol with minimal shuffling around. 
 
-
 ## Usage
 
 - clone

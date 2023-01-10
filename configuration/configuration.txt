@@ -1,0 +1,40 @@
+// Weblog Configuration
+
+# About your weblog
+Weblog Title: omg mph
+Weblog Description: a weblog by mph
+Author: just mph
+
+# General config stuff
+
+Separator:  · 
+// Navigation: about, another-page, <a href="https://example.com">Example</a>, [Example](https://example.com)
+
+# Time stuff
+
+; You can use a timezone value from the "TZ database name" column on this 
+; web page: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+Timezone: America/Los_Angeles
+Date format: F j, Y g:i A
+
+# Posts
+
+// Post path format: /Y/m/
+
+Default post: <<[---
+Date: $date
+Tags: 
+---
+
+# Your new post
+
+This is a new blog post. You can author it in _Markdown_, which is **awesome**.]>>
+
+;; Tags {tags}
+;; -----------
+
+Tag path: /tag/
+Tags format: <<[
+[tag:begin]<i class="fa-solid fa-tag"></i> <a class="tag" href="$tag_location">$tag</a> [tag:end]
+]>>
