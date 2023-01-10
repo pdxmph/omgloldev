@@ -1,5 +1,5 @@
 weblog_title: omg mph weblog
-separator: &bull;
+separator: "&bull;"
 post_title: This is a fixture headline
 date: '2023-01-01'
 tags: 
