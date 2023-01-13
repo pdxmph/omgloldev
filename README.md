@@ -8,7 +8,7 @@ Make a little Sinatra environment where you can work on your omg.lol blog templa
 - cd omgloldev
 - `bundle install`
 - `ruby omgloldev.rb`
-- Visit [http://127.0.0.1:4567/template](http://127.0.0.1:4567/template) for now
+- Visit [http://127.0.0.1:4567/template](http://127.0.0.1:4567/)
 
 ## etc.
 
