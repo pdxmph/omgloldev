@@ -1,0 +1,45 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    
+    %title "omgloldev: An omglol blog dev environment"
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %link{href: "https://cdn.simplecss.org/simple.min.css", rel: "stylesheet"}/
+    = haml :stylesheet
+  %body
+    %header
+      %h1.weblog-title
+        %i.fa-flask.fa-solid.meteor
+         omgloldev 
+      %p An omglol blog dev environment
+      
+      =haml :app_nav
+    %main
+      %textarea{readonly: true}
+        - @template = HtmlBeautifier.beautify(haml :template)
+        = @template
+      %form{action: "/save_template", method: "post"}
+        %input{name: "html_text", type: "hidden", value: @template, style: "width:100%;height:25rem;"}
+        
+        %br
+       
+        - form_text = "<i class='fa-clipboard.fa-solid'>Save"       
+        %input{:style => "float:right;background-color: var(--ctp-mocha-red);", type: "submit", value: "Save"}
+        - if @state == "saved"
+          :javascript
+            alert("Template saved to /configuration/template.html");
+          
+      %button{:style => "float:right;background-color: var(--ctp-mocha-red);margin-right:1rem;"}
+        Copy
+    %footer
+      %p
+        Made with
+        %a{href: "https://weblog.lol"} weblog.lol
+
+:javascript
+      document.querySelector("button").onclick = function(){
+        document.querySelector("textarea").select();
+        document.execCommand('copy');
+      };
