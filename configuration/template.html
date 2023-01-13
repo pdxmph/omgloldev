@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>{weblog-title}{separator}{post-title}</title>
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
@@ -12,17 +11,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
     @import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');      /* or using unpkg.com */
-    
     body {
     color: var(--ctp-mocha-text);
     background: var(--ctp-mocha-base);
     font-family: "Fira Mono";
     }
-
     body > header {
     color: var(--ctp-mocha-text);
     background: var(--ctp-mocha-base);
-     
     }
     blockquote {
     margin: 2rem 0 2rem 2rem;
@@ -52,17 +48,18 @@
     .meteor {
     color: var(--ctp-mocha-red);
     }
-
     a, a:visited {
     color: var(--ctp-mocha-red);
     }
-    
     h1, h2, h3, h4, h5, h6 {
     font-family: 'Neuton', serif;
     margin: 1rem 0;
     color: var(--ctp-mocha-lavendar);
     }
-        
+    body {
+    grid-template-columns: 0fr 80% 0fr;
+    place-content: center;
+    }
     article { font-family: "Fira Mono";
     border-bottom:none;
     border-left: none;
@@ -70,22 +67,16 @@
     border-right:none;
     padding-bottom:2em;
     }
-
-    a.tag {font-size: .5rem;}
-
-
     .column-left {
     float: left;
     width: 75%;
     padding: 10px;
     }
-
     .column-right {
     float: left;
     width: 20%;
     padding-top: 2em;
     }
-
     /* Clear floats after the columns */
     .row:after {
     content: "";
