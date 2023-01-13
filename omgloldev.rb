@@ -4,22 +4,25 @@ require 'sinatra'
 require 'haml'
 require 'puma'
 require 'sinatra/config_file'
+# require 'sinatra/partial'
+set :haml, { escape_html: false }
 
 config_file 'fixtures.yaml'
 
-get '/', :provides => 'html' do 
+get '/', { provides: 'html' } do
   haml :index
 end
-  
-get '/preview', :provides => 'html' do
+
+get '/preview', { provides: 'html' } do
   @title = settings.weblog_title
   @separator = settings.separator
   @post_title = settings.post_title
-  @display_type = "preview"
+  @display = 'preview'
   @date = settings.date
   haml :template
 end
 
-get '/raw', :provides => 'html' do 
-  @display_type="raw"
-end 
+get '/raw', { provides: 'html' } do
+  @display = 'raw'
+  haml :raw
+end

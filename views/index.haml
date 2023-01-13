@@ -100,20 +100,8 @@
          omgloldev 
       %p An omglol blog dev environment
       
-      %nav
-        %ul
-          %li
-            %a{ :href => "/preview", :title => "Preview" }
-              %i.fa-solid.fa-magnifying-glass.meteor
-              Preview
-          %li
-            %a{ :href => "#", :title => "Raw HTML" }
-              %i.fa-solid.fa-code.meteor
-              Raw
-          %li
-            %a{ :href => "#", :title => "Other" } 
-              %i.fa-solid.fa-box-heart.meteor
-              Other
+      = haml :app_nav
+          
     %main
       %article
         There is not much to say here yet.      
