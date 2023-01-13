@@ -14,7 +14,7 @@ get '/', { provides: 'html' } do
   haml :index
 end
 
-get '/preview', { :provides => 'html' } do
+get '/preview', { provides: 'html' } do
   @title = settings.weblog_title
   @separator = settings.separator
   @post_title = settings.post_title
@@ -26,7 +26,7 @@ end
 get '/raw', { provides: 'html' } do
   @display = 'raw'
   @state = params['state']
-  haml :raw
+  haml :"_pages/raw"
 end
 
 post '/save_template' do

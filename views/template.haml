@@ -28,8 +28,8 @@
         .column-left
           %article
             - if @display == "preview"
-              = markdown :test_post
-              = haml :meta
+              = markdown :"_partials/test_post"
+              = haml :"_partials/meta"
             - elsif @display == "raw"
               {body}
               .meta
@@ -41,7 +41,7 @@
         
         .column-right
           - if @display == "preview"
-            = haml :recent
+            = haml :"_partials/recent"
           -elsif @display == "raw"
             %h2 Recent Posts
             {recent-posts}

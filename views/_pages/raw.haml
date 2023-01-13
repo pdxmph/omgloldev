@@ -15,7 +15,7 @@
          omgloldev 
       %p An omglol blog dev environment
       
-      =haml :app_nav
+      =haml :"_partials/app_nav"
     %main
       %textarea{readonly: true}
         - @template = HtmlBeautifier.beautify(haml :template)
