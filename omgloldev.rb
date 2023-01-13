@@ -4,6 +4,7 @@ require 'sinatra'
 require 'haml'
 require 'puma'
 require 'sinatra/config_file'
+require 'htmlbeautifier'
 # require 'sinatra/partial'
 set :haml, { escape_html: false }
 
@@ -24,5 +25,13 @@ end
 
 get '/raw', { provides: 'html' } do
   @display = 'raw'
+  @state = params['state']
   haml :raw
+end
+
+post '/save_template' do
+  File.open('configuration/template.html', 'w') do |f|
+    f.write params[:html_text]
+  end
+  redirect '/raw?state=saved'
 end

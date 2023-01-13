@@ -3,125 +3,23 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     
-    - if @display_type == "raw"
-      %title {weblog-title}{separator}{post-title}
+    - if @display == "raw"
+      %title 
+        {weblog-title}{separator}{post-title}
     -else 
-      %title "#{@title} #{@separator} #{@post_title}"
+      %title 
+        #{@title} #{@separator} #{@post_title}
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
     %link{href: "https://cdn.simplecss.org/simple.min.css", rel: "stylesheet"}/
 
-    :css
-      @import url('https://static.omg.lol/type/fontawesome-free/css/all.css');
-      @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-      @import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');      /* or using unpkg.com */
-            
-      body {
-        color: var(--ctp-mocha-text);
-        background: var(--ctp-mocha-base);
-        font-family: "Fira Mono";
-      }
-      
-      body > header {
-        color: var(--ctp-mocha-text);
-        background: var(--ctp-mocha-base);
-      }
-      
-      blockquote {
-      margin: 2rem 0 2rem 2rem;
-      padding: .4rem .8rem;
-      border-left: .35rem solid var(--ctp-mocha-yellow);
-      color: var(--ctp-mocha-text);
-      font-style: italic;
-      }
-      
-      aside {
-          font-size: 1rem;
-          width: 30%;
-          padding: 0 15px;
-          margin-left: 15px;
-          float: right;
-        }
-      
-        aside, details, pre, progress {
-          background-color: var(--ctp-mocha-surface0);
-          border: 1px solid var(--border);
-          border-radius: 5px;
-          margin-bottom: 1rem;
-      }
-      
-      mark {
-      padding: 2px 5px;
-      border-radius: 4px;
-      background-color: var(--ctp-mocha-yellow);
-      }
-            
-      .meteor {
-        color: var(--ctp-mocha-red);
-        }
-      
-      a, a:visited {
-        color: var(--ctp-mocha-red);
-        text-decoration: none;
-        }
+    = haml :stylesheet
 
-      a:hover {text-decoration: underline;}
-      
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Neuton', serif;
-        margin: 1rem 0;
-        color: var(--ctp-mocha-lavendar);
-        }
-      
-      body { 
-          grid-template-columns: 0fr 80% 0fr;
-          place-content: center;
-        }
-      
-      article { font-family: "Fira Mono"; 
-                border-bottom:none;
-                border-left: none;
-                border-top:none;
-                border-right:none;
-                padding-bottom:2em;
-              }
-      
-      .column-left {
-        float: left;
-        width: 75%;
-        padding: 10px;
-      }
-      
-      .column-right {
-        float: left;
-        margin-left: 2rem;
-        width: 20%;
-        padding-top: 1.5em;
-      }
-      
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column-left, .column-right {
-          width: 100%;
-        }
-        body { 
-          grid-template-columns: 0fr 95% 0fr;
-          place-content: center;
-        }
-      }
   %body
     %header
       %h1.weblog-title
         %i.meteor.fa-solid.fa-meteor>
-        - if @display_type == "raw"
+        - if @display == "raw"
            {weblog-title}
         - else
            #{@title}
@@ -130,15 +28,15 @@
         .column-left
           %article
             - if @display == "preview"
-              = haml :post
+              = markdown :test_post
               = haml :meta
             - elsif @display == "raw"
               {body}
               .meta
                 %i.fa-solid.fa-clock
-                  {date}
-                %i.fa-solid.fa-tag
-                  {tags}
+                {date}
+                %br
+                {tags}
             %br/
         
         .column-right
