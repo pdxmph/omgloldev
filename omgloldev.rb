@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 
 require 'sinatra'
 require 'haml'
@@ -14,7 +14,7 @@ get '/', { provides: 'html' } do
   haml :index
 end
 
-get '/preview', { provides: 'html' } do
+get '/preview', { :provides => 'html' } do
   @title = settings.weblog_title
   @separator = settings.separator
   @post_title = settings.post_title
