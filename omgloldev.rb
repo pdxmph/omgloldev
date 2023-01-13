@@ -11,7 +11,7 @@ set :haml, { escape_html: false }
 config_file 'fixtures.yaml'
 
 get '/', { provides: 'html' } do
-  haml :index
+  haml :"_pages/index"
 end
 
 get '/preview', { provides: 'html' } do
