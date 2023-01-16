@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'puma'
 gem 'haml'
-gem 'sinatra-contrib'
 gem 'htmlbeautifier'
+gem 'pandoc-ruby'
+gem 'puma'
+gem 'sinatra'
+gem 'sinatra-contrib'
