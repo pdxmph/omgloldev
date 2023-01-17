@@ -8,17 +8,35 @@
     <meta charset='utf-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
     <link href='https://cdn.simplecss.org/simple.min.css' rel='stylesheet'>
+    <link href="{atom-url}" rel="alternate" type="application/atom+xml" />
+    <script defer data-domain="mph.weblog.lol" src="https://plausible.io/js/script.js"></script>
     <style>
       @import url('https://static.omg.lol/type/fontawesome-free/css/all.css');
       @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-      @import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');      /* or using unpkg.com */
+      @import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');
 
       body {
         color: var(--ctp-mocha-text);
         background: var(--ctp-mocha-base);
         font-family: "Fira Mono";
       }
+
+      a, a:visited {
+        color: var(--ctp-mocha-red);
+        text-decoration: none;
+      }
+
+      header > nav a, header > nav a:visited {
+        margin: 0 .5rem 1rem .5rem;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        color: var(--ctp-mocha-red);
+        display: inline-block;
+        padding: .1rem 1rem;
+        text-decoration: none;
+      }
+
 
       textarea {
         height: 22rem;
@@ -60,11 +78,6 @@
 
       .meteor {
         color: var(--ctp-mocha-red);
-        }
-
-      a, a:visited {
-        color: var(--ctp-mocha-red);
-        text-decoration: none;
         }
 
       a:hover {text-decoration: underline;}
@@ -115,7 +128,7 @@
       }
 
       /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 800px) {
         .column-left, .column-right {
           width: 100%;
         }
@@ -157,6 +170,10 @@
       <p>
         Made with
         <a href='https://weblog.lol'>weblog.lol</a>
+        featuring the
+        <a href='https://github.com/catppuccin/catppuccin'>Catppuccin theme,</a>
+        ©
+        <a href='https://mike.puddingtime.org'>mph</a>
       </p>
     </footer>
   </body>
