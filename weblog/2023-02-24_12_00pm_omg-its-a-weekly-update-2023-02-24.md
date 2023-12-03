@@ -4,7 +4,7 @@ Tags: weekly
 Date: 2023-02-24 12:00pm
 ---
 
-# Week of 2023-02-19 
+# The Week of 2023-02-19 
 
 ### 📷  Photography 
 
