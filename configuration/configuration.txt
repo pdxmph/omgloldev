@@ -32,7 +32,7 @@ Tags:
 
 # Your new post
 
-This is a new blog post. You can author it in _Markdown_, which is **awesome**.]>>
+This is a new blog post. You can author it in _Markdown_, which is awesome.]>>
 
 ;; Tags {tags}
 ;; -----------
