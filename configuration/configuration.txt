@@ -1,14 +1,17 @@
 // Weblog Configuration
 
 # About your weblog
-Weblog Title: omg mph
+Weblog Title: just mph
 Weblog Description: a weblog by mph
-Author: just mph
+Author: mph
 
 # General config stuff
 
 Separator:  · 
-// Navigation: about, another-page, <a href="https://example.com">Example</a>, [Example](https://example.com)
+
+Navigation: [mph's home](https://mike.puddingtime.org), [mph on Mastodon](https://social.lol/@mph), [about this blog](/about)
+
+Tag path: /tag/
 
 # Time stuff
 
