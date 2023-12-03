@@ -3,7 +3,7 @@
 # About your weblog
 Weblog Title: just mph
 Weblog Description: a weblog by mph
-Author: mph
+Author: mike
 
 # General config stuff
 
